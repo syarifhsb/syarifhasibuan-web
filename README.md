@@ -1,5 +1,5 @@
+# 🚧 UNDER CONSTRUCTION 🚧
 # syarifhsb.dev
-🚧 UNDER CONSTRUCTION 🚧
 
 Hey! It's me Syarif Hasibuan. This is my honest attempt to create my beautiful personal website.
 
@@ -20,4 +20,4 @@ This is it snippet of my ~~beautiful~~ website to be.
 
 ![](resources/images/web_snippet_home.png)
 
-🚧 UNDER CONSTRUCTION 🚧
+# 🚧 UNDER CONSTRUCTION 🚧
