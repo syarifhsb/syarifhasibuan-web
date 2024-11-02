@@ -1,4 +1,4 @@
-# syarifhasibuan.dev
+# Syarif Hasibuan Personal Website
 
 > 🚧 UNDER CONSTRUCTION 🚧
 
