@@ -4,29 +4,45 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Syarif Hasibuan</title>
+    <link rel="stylesheet" href="/index.css" />
   </head>
-  <header>
-    <h1>😎 Syarif Hasibuan</h1>
-  </header>
-  <nav>
-    <a href="/">Home</a>
-    <a href="/projects">Projects</a>
-    <a href="/about">About</a>
-  </nav>
   <body>
-    <section id="hero">
-      <h1>Hey there!<br />Syarif Hasibuan here</h1>
-      <p>
-        I am an aerospace engineer and a software engineer in one package. I am
-        currently on my web development journey.
-      </p>
-      <a href="#">Contact me</a>
-      <img
-        src="/assets/images/myself.jpg"
-        alt="It's me!"
-        width="576"
-        height="576"
-      />
+    <header class="header">
+      <div class="container header-container">
+        <h1 class="logo">
+          <a href="/">😎 Syarif Hasibuan</a>
+        </h1>
+        <nav class="navigation">
+          <ul class="navigation-list">
+            <li><a href="/">Home</a></li>
+            <li><a href="/projects">Projects</a></li>
+            <li><a href="/about">About</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <section class="hero">
+      <div class="hero-container container">
+        <div class="image">
+          <img
+            class="hero-image"
+            src="/assets/images/myself.jpg"
+            alt="It's me!"
+            width="576"
+            height="576"
+          />
+        </div>
+        <div class="hero-content">
+          <h1 class="hero-title">Hey there!<br />Syarif Hasibuan here</h1>
+          <p class="hero-description">
+            I am an aerospace engineer and a software engineer in one package. I
+            am currently on my web development journey.
+          </p>
+          <div>
+            <a class="hero-button" href="#">Contact me</a>
+          </div>
+        </div>
+      </div>
     </section>
     <section>
       <h2>My Projects</h2>
@@ -52,24 +68,24 @@
         of it. So, enjoy this presentation, and send me a feedback!
       </p>
     </section>
+    <footer>
+      <div>
+        <a href="mailto:syarifhsb.dev@gmail.com" target="_blank">
+          <img src="/assets/icons/mail.svg" />
+        </a>
+        <a href="https://github.com/syarif-hsb" target="_blank">
+          <img src="/assets/icons/github.svg" />
+        </a>
+        <a href="https://www.linkedin.com/in/syarif-hsb/" target="_blank">
+          <img src="/assets/icons/linkedin.svg" />
+        </a>
+        <a href="https://x.com/syarif_hsb" target="_blank">
+          <img src="/assets/icons/twitter.svg" />
+        </a>
+      </div>
+      <div>
+        <p>&copy; 2024 Syarif Hasibuan</p>
+      </div>
+    </footer>
   </body>
-  <footer>
-    <div>
-      <a href="mailto:syarifhsb.dev@gmail.com" target="_blank">
-        <img src="/assets/icons/mail.svg" />
-      </a>
-      <a href="https://github.com/syarif-hsb" target="_blank">
-        <img src="/assets/icons/github.svg" />
-      </a>
-      <a href="https://www.linkedin.com/in/syarif-hsb/" target="_blank">
-        <img src="/assets/icons/linkedin.svg" />
-      </a>
-      <a href="https://x.com/syarif_hsb" target="_blank">
-        <img src="/assets/icons/twitter.svg" />
-      </a>
-    </div>
-    <div>
-      <p>&copy; 2024 Syarif Hasibuan</p>
-    </div>
-  </footer>
 </html>
