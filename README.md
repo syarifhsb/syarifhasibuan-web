@@ -10,6 +10,10 @@ If you're wondering who is behind this, this is how I look like.
 
 Whelp, not the thing the one you want to see. You probably come here to see how my [website](#preview) looks like.
 
+## UI/UX Design
+
+Figma URL: (TODO)
+
 ## Pages
 
 1. Home

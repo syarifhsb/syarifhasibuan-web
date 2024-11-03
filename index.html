@@ -4,14 +4,19 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Syarif Hasibuan</title>
+    <meta
+      name="description"
+      content="Syarif is a Web Developer and Aerospace Engineer"
+    />
     <link rel="stylesheet" href="/index.css" />
   </head>
-  <body>
+  <body class="site">
     <header class="header">
       <div class="container header-container">
-        <h1 class="logo">
-          <a href="/">😎 Syarif Hasibuan</a>
-        </h1>
+        <a href="/">
+          <h1 class="logo">😎 Syarif Hasibuan</h1>
+        </a>
+
         <nav class="navigation">
           <ul class="navigation-list">
             <li><a href="/">Home</a></li>
@@ -21,57 +26,64 @@
         </nav>
       </div>
     </header>
-    <section class="hero">
-      <div class="hero-container container">
-        <div class="image">
-          <img
-            class="hero-image"
-            src="/assets/images/myself.jpg"
-            alt="It's me!"
-            width="576"
-            height="576"
-          />
-        </div>
-        <div class="hero-content">
-          <h1 class="hero-title">Hey there!<br />Syarif Hasibuan here</h1>
-          <p class="hero-description">
-            I am an aerospace engineer and a software engineer in one package. I
-            am currently on my web development journey.
-          </p>
-          <div>
-            <a class="hero-button" href="#">Contact me</a>
+
+    <main class="site-content">
+      <section class="hero section">
+        <div class="hero-container container">
+          <div class="image">
+            <img
+              class="hero-image"
+              src="/assets/images/myself.jpg"
+              alt="It's me!"
+              width="576"
+              height="576"
+            />
+          </div>
+          <div class="hero-content">
+            <h1 class="hero-title">Hey there!<br />Syarif Hasibuan here</h1>
+            <p class="hero-description">
+              I am an aerospace engineer and a software engineer in one package.
+              I am currently on my web development journey.
+            </p>
+            <div>
+              <a class="hero-button" href="#">Contact me</a>
+            </div>
           </div>
         </div>
-      </div>
-    </section>
-    <section>
-      <h2>My Projects</h2>
-    </section>
-    <section>
-      <h2>My Skills</h2>
-    </section>
-    <section>
-      <h2>About</h2>
-      <p>
-        I am a versatile and technically skilled engineer with a solid
-        foundation in Aircraft Systems, Control Systems, with a little bit of
-        Computer Science. With over five years of experience on Airbus
-        simulation platforms. I’m currently working as a Simulation Engineer in
-        Toulouse, France, where I develop sircraft systems simulation models
-        using Matlab/Simulink, analyze the the C codes, do testing and
-        validation on Airbus simulation platforms, both real time and non-real
-        time.
-      </p>
-      <p>
-        Currently, I am embracing web development as a journey to get better at
-        software development. The page you are currently seeing is the product
-        of it. So, enjoy this presentation, and send me a feedback!
-      </p>
-    </section>
-    <footer>
-      <div>
+      </section>
+
+      <section class="section">
+        <h2>My Projects</h2>
+      </section>
+
+      <section class="section">
+        <h2>My Skills</h2>
+      </section>
+
+      <section class="section">
+        <h2>About</h2>
+        <p>
+          I am a versatile and technically skilled engineer with a solid
+          foundation in Aircraft Systems, Control Systems, with a little bit of
+          Computer Science. With over five years of experience on Airbus
+          simulation platforms. I’m currently working as a Simulation Engineer
+          in Toulouse, France, where I develop sircraft systems simulation
+          models using Matlab/Simulink, analyze the the C codes, do testing and
+          validation on Airbus simulation platforms, both real time and non-real
+          time.
+        </p>
+        <p>
+          Currently, I am embracing web development as a journey to get better
+          at software development. The page you are currently seeing is the
+          product of it. So, enjoy this presentation, and send me a feedback!
+        </p>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="social-links">
         <a href="mailto:syarifhsb.dev@gmail.com" target="_blank">
-          <img src="/assets/icons/mail.svg" />
+          <img class="icon-white" src="/assets/icons/mail.svg" />
         </a>
         <a href="https://github.com/syarif-hsb" target="_blank">
           <img src="/assets/icons/github.svg" />

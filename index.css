@@ -3,6 +3,16 @@ body {
   margin: 0;
 }
 
+.site {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+.site-content {
+  flex: 1;
+}
+
 .header {
   background-color: #1b3b5a;
   color: #f8f8ff;
@@ -24,17 +34,18 @@ body {
   flex-direction: row;
 }
 
+.header,
 .header a {
   color: #f8f8ff;
   text-decoration: none;
 }
 
 .logo {
-  font-size: 2.5rem;
+  font-size: 1.5rem;
 }
 
 .navigation {
-  font-size: 2rem;
+  font-size: 1.2rem;
 }
 
 .navigation-list {
@@ -45,15 +56,6 @@ body {
   list-style: none;
   margin: 0;
   padding: 0;
-}
-
-footer {
-  background-color: #1b3b5a;
-  color: #f8f8ff;
-  bottom: 0;
-  left: 0;
-  height: 70px;
-  width: 100%;
 }
 
 .hero {
@@ -96,4 +98,23 @@ footer {
   font-size: 2.5rem;
   text-decoration: none;
   color: #1b3b5a;
+}
+
+.footer {
+  background-color: #1b3b5a;
+  color: #f8f8ff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  padding: 2rem;
+}
+
+.icon-white {
+  filter: invert(1);
+}
+
+.social-links {
+  display: flex;
+  gap: 1rem;
 }
