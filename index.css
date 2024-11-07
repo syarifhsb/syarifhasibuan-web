@@ -1,10 +1,19 @@
 :root {
-  --primary-color: #3c7fa6;
-  --secondary-color: #e8dab2;
+  --deep-sea-color: #1b3b5a;
+  --ocean-blue-color: #3c7fa6;
+  --sail-white-color: #f8f8ff;
+  --sand-color: #e8dab2;
+  --sea-foam-color: #d4f1f7;
+  --boat-wood-color: #c4a484;
 }
 
 body {
   font-family: sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+h2 {
   margin: 0;
 }
 
@@ -14,21 +23,22 @@ body {
   flex-direction: column;
 }
 
-.site-content {
-  flex: 1;
+.homeview {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
 .header {
-  background-color: #1b3b5a;
-  color: #f8f8ff;
+  background-color: var(--deep-sea-color);
+  color: var(--sail-white-color);
   width: 100%;
 }
 
 .container {
-  max-width: 1200px;
+  max-width: 1440px;
   margin: 0 auto;
-  padding-top: 20px;
-  padding-bottom: 20px;
+  padding: 0 20px;
 }
 
 .header-container {
@@ -39,9 +49,8 @@ body {
   flex-direction: row;
 }
 
-.header,
 .header a {
-  color: #f8f8ff;
+  color: var(--sail-white-color);
   text-decoration: none;
 }
 
@@ -64,15 +73,20 @@ body {
 }
 
 .hero {
-  background-color: var(--primary-color);
-  color: var(--secondary-color);
+  background-color: var(--ocean-blue-color);
+  color: var(--sail-white-color);
+  flex: 1;
+  display: flex;
 }
 
 .hero-container {
   display: flex;
-  align-items: center;
-  justify-content: space-between;
+  flex-direction: row;
+  justify-content: left;
   flex-wrap: wrap-reverse;
+  align-items: center;
+  gap: 50px;
+  flex: 1;
 }
 
 .hero-image {
@@ -81,11 +95,13 @@ body {
   border-radius: 100px;
   width: 100%;
   object-fit: contain;
+  margin: 20px 0;
 }
 
 .hero-title {
   font-size: 2rem;
   font-weight: bold;
+  flex: 3;
 }
 
 .hero-content {
@@ -102,23 +118,90 @@ body {
 
 .hero-button {
   display: block;
-  background-color: #e8dab2;
+  background-color: var(--sand-color);
   padding: 20px 30px;
   border-radius: 10px;
   font-size: 1.5rem;
   font-weight: bold;
   text-decoration: none;
-  color: #1b3b5a;
+  color: var(--deep-sea-color);
 }
 
-.footer {
-  background-color: #1b3b5a;
-  color: #f8f8ff;
+.section {
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding: 50px 0;
+}
+
+.projects {
+  background-color: var(--sail-white-color);
+  color: var(--ocean-blue-color);
+}
+
+.section-title {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+}
+
+.cards {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 50px;
+  margin-bottom: 50px;
+}
+
+.card {
+  width: 380px;
+  height: 600px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  border-radius: 16px;
+  background-color: var(--sea-foam-color);
+}
+
+.card-image {
+  width: 320px;
+  height: 320px;
+  margin: 30px 30px 0 30px;
+  border-radius: 16px;
+}
+
+.card-title {
+  margin: 0 30px;
+  font-weight: bold;
+}
+
+.card-content {
+  margin: 0 30px;
+}
+
+.about {
+  background-color: var(--ocean-blue-color);
+  color: var(--sail-white-color);
+}
+
+.about-content {
+  text-align: center;
+  max-width: 780px;
+}
+
+.footer {
+  background-color: var(--deep-sea-color);
+  color: var(--sail-white-color);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
   gap: 1rem;
-  padding: 2rem;
+  padding: 1rem;
+}
+
+.footer p {
+  margin: 0;
 }
 
 .icon-white {

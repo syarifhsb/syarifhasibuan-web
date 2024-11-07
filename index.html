@@ -5,94 +5,148 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Syarif Hasibuan</title>
     <meta
-      name="description"
-      content="Syarif is a Web Developer and Aerospace Engineer"
-    />
-    <script src="https://cdn.tailwindcss.com"></script>
+        name="description"
+        content="Syarif is a Software Developer and Aerospace Engineer"
+        />
     <link rel="stylesheet" href="/index.css" />
   </head>
 
   <body class="site text-2xl mx-auto">
-    <header class="header">
-      <div class="container header-container">
-        <a href="/">
-          <h1 class="logo">😎 Syarif Hasibuan</h1>
-        </a>
+    <div class="homeview">
+      <header class="header">
+        <div class="container header-container">
+          <a href="/">
+            <h1 class="logo">😎 Syarif Hasibuan</h1>
+          </a>
 
-        <nav class="navigation">
-          <ul class="navigation-list">
-            <li><a href="/">Home</a></li>
-            <li><a href="/projects">Projects</a></li>
-            <li><a href="/about">About</a></li>
-          </ul>
-        </nav>
-      </div>
-    </header>
+          <nav class="navigation">
+            <ul class="navigation-list">
+              <li><a href="/">Home</a></li>
+              <!-- <li><a href="/projects">Projects</a></li> -->
+              <!-- <li><a href="/about">About</a></li> -->
+              <li><a href="#">Projects</a></li>
+              <li><a href="#">About</a></li>
+            </ul>
+          </nav>
+        </div>
+      </header>
 
-    <main class="site-content">
       <section class="hero section">
         <div class="hero-container container">
           <div class="image">
             <img
-              class="hero-image"
-              src="/assets/images/myself.jpg"
-              alt="It's me!"
-              width="500"
-              height="500"
-            />
+                class="hero-image"
+                src="/assets/images/myself.jpg"
+                alt="It's me!"
+                width="500"
+                height="500"
+                />
           </div>
           <div class="hero-content">
             <h1 class="hero-title">Hey there!<br />Syarif Hasibuan here</h1>
             <p class="hero-description">
-              I am an aerospace engineer and a software engineer in one package.
-              I am currently on my web development journey.
+            I am an aerospace engineer and a software engineer in one package.
+            I am currently on my web development journey.
             </p>
             <a class="hero-button" href="#">Contact me</a>
           </div>
         </div>
       </section>
+    </div>
 
-      <section class="section">
+    <section class="projects section">
+      <div class="section-title">
         <h2 class="text-2xl">My Projects</h2>
-      </section>
+      </div>
+      <div class="cards container">
+        <div class="card">
+          <img
+              class="card-image"
+              src="/assets/images/Full-Flight-Simulatoren-cropped.jpg"
+              alt="Flight Simulator"
+              width="320"
+              height="320"
+              />
+          <div class="card-title">
+            <h3>Aircraft Simulation</h3>
+          </div>
+          <div class="card-content">
+            <p>I build Aircraft Simulation model on my daily work. Particularly on Flight Control System and Navigation system. I do development on Matlab/Simulink, C code analysis, deployment, verification and validation on Airbus Simulation Platform.</p>
+          </div>
+        </div>
+        <div class="card">
+          <img
+              class="card-image"
+              src="/assets/images/game-of-life.gif"
+              alt="Lena"
+              width="320"
+              height="320"
+              />
+          <div class="card-title">
+            <h3>Conway's Game of Life in C</h3>
+          </div>
+          <div class="card-content">
+            <p>Recreation of Conway's Game of Life built with C and Simple DirectMedia Layer (SDL2). Check it out at: 
+            <a href="https://github.com/syarifhasibuan/gameoflife" target="_blank">https://github.com/syarifhasibuan/gameoflife</a>
+            </p>
+          </div>
+        </div>
+        <div class="card">
+          <img
+              class="card-image"
+              src="/assets/images/demo-csvr-cropped.gif"
+              alt="csvr - A CLI csv reader"
+              width="320"
+              height="320"
+              />
+          <div class="card-title">
+            <h3>csvr - A CLI csv reader</h3>
+          </div>
+          <div class="card-content">
+            <p>I love working in the terminal. This is a tool that's inspired from my workflow. It is build with ncurses with C, and it is very simple. Check it out at: 
+            <a href="https://github.com/syarifhasibuan/csvr" target="_blank">https://github.com/syarifhasibuan/csvr</a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
 
-      <section class="section">
-        <h2>My Skills</h2>
-      </section>
-
-      <section class="section">
+    <section class="about section">
+      <div class="section-title">
         <h2>About</h2>
+      </div>
+      <div class="about-content" >
         <p>
-          I am a versatile and technically skilled engineer with a solid
-          foundation in Aircraft Systems, Control Systems, with a little bit of
-          Computer Science. With over five years of experience on Airbus
-          simulation platforms. I’m currently working as a Simulation Engineer
-          in Toulouse, France, where I develop sircraft systems simulation
-          models using Matlab/Simulink, analyze the the C codes, do testing and
-          validation on Airbus simulation platforms, both real time and non-real
-          time.
+        I am a versatile and technically skilled engineer with a solid
+        foundation in Aircraft Systems, Control Systems, with a little bit of
+        Computer Science. With over five years of experience on Airbus
+        simulation platforms. I’m currently working as a Simulation Engineer
+        in Toulouse, France, where I develop sircraft systems simulation
+        models using Matlab/Simulink, analyze the the C codes, do testing and
+        validation on Airbus simulation platforms, both real time and non-real
+        time.
         </p>
         <p>
-          Currently, I am embracing web development as a journey to get better
-          at software development. The page you are currently seeing is the
-          product of it. So, enjoy this presentation, and send me a feedback!
+        Currently, I am embracing web development as a journey to get better
+        at software development. The page you are currently seeing is the
+        product of it. So, enjoy this presentation, and send me a feedback!
         </p>
-      </section>
-    </main>
+      </div>
+    </section>
 
     <footer class="footer">
-      <div class="social-links">
+      <div class="social-links container">
         <a href="mailto:syarifhsb.dev@gmail.com" target="_blank">
           <img class="icon-white" src="/assets/icons/mail.svg" />
         </a>
         <a href="https://github.com/syarif-hsb" target="_blank">
-          <img src="/assets/icons/github.svg" />
+          <img class="icon-white" src="/assets/icons/github.svg" />
         </a>
         <a href="https://www.linkedin.com/in/syarif-hsb/" target="_blank">
-          <img src="/assets/icons/linkedin.svg" />
+          <img class="icon-white" src="/assets/icons/linkedin.svg" />
         </a>
         <a href="https://x.com/syarif_hsb" target="_blank">
-          <img src="/assets/icons/twitter.svg" />
+          <img class="icon-white" src="/assets/icons/twitter.svg" />
         </a>
       </div>
       <div>
