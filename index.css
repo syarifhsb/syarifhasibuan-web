@@ -38,7 +38,8 @@ h2 {
 .container {
   max-width: 1440px;
   margin: 0 auto;
-  padding: 0 20px;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
 .header-container {
@@ -68,8 +69,10 @@ h2 {
   gap: 40px;
   font-weight: 700;
   list-style: none;
-  margin: 0;
+  margin: 5px;
   padding: 0;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .hero {
@@ -90,10 +93,9 @@ h2 {
 }
 
 .hero-image {
-  width: 500px;
   height: 500px;
+  width: 500px;
   border-radius: 100px;
-  width: 100%;
   object-fit: contain;
   margin: 20px 0;
 }
@@ -106,6 +108,7 @@ h2 {
 
 .hero-content {
   max-width: 500px;
+  flex: 1;
   display: flex;
   flex-direction: column;
   gap: 1rem;
@@ -131,7 +134,8 @@ h2 {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 50px 0;
+  padding-top: 50px;
+  padding-bottom: 50px;
 }
 
 .projects {
@@ -154,8 +158,8 @@ h2 {
 }
 
 .card {
-  width: 380px;
-  height: 600px;
+  max-width: 380px;
+  max-height: 600px;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -187,6 +191,8 @@ h2 {
 .about-content {
   text-align: center;
   max-width: 780px;
+  margin-right: 20px;
+  margin-left: 20px;
 }
 
 .footer {
@@ -211,4 +217,43 @@ h2 {
 .social-links {
   display: flex;
   gap: 1rem;
+}
+
+@media (max-width: 768px) {
+  .header-container {
+    flex-direction: column;
+  }
+
+  .hero-container {
+    flex-direction: column;
+  }
+
+  .hero-content {
+    text-align: center;
+  }
+
+  .hero-content {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .hero-image {
+    height: auto;
+    width: 100%;
+    border-radius: 0;
+  }
+
+  /* .cards { */
+
+  /* } */
+
+  /* .card-image { */
+  /* } */
+}
+
+@media (max-width: 420px) {
+  .card-image {
+    height: auto;
+    width: calc(100vw - 100px);
+  }
 }
