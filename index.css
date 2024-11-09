@@ -1,11 +1,86 @@
+/* CSS Variables */
+
 :root {
-  --deep-sea-color: #1b3b5a;
-  --ocean-blue-color: #357392;
-  --sail-white-color: #f8f8ff;
-  --sand-color: #e8dab2;
-  --sea-foam-color: #d4f1f7;
-  --boat-wood-color: #c4a484;
+  --primary-color: #1b3b5a; /* deep-sea-color */
+  --secondary-color: #357392; /* ocean-blue-color */
+  --background-color: #f8f8ff; /* sail-white-color */
+  --accent-color: #e8dab2; /* sand-color */
+  --highlight-color: #d4f1f7; /* sea-foam-color */
+  --dark-highlight-color: #c4a484; /* boat-wood-color */
 }
+
+/* CSS Reset: https://joshwcomeau.com/css/custom-css-reset */
+
+/* 1. Use a more-intuitive box-sizing model */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* 2. Remove default margin */
+* {
+  margin: 0;
+}
+
+body {
+  /* 3. Add accessible line-height */
+  line-height: 1.5;
+  /* 4. Improve text rendering */
+  -webkit-font-smoothing: antialiased;
+}
+
+/* 5. Improve media defaults */
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+/* 6. Inherit fonts for form controls */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* 7. Avoid text overflows */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+/* 8. Improve line wrapping */
+p {
+  text-wrap: pretty;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-wrap: balance;
+}
+
+/*
+  9. Create a root stacking context
+*/
+#root,
+#__next {
+  isolation: isolate;
+}
+
+/* Our Own Styles */
 
 body {
   font-family: sans-serif;
@@ -30,8 +105,8 @@ h2 {
 }
 
 .header {
-  background-color: var(--deep-sea-color);
-  color: var(--sail-white-color);
+  background-color: var(--primary-color);
+  color: var(--background-color);
   width: 100%;
   padding-top: 10px;
   padding-bottom: 10px;
@@ -54,7 +129,7 @@ h2 {
 }
 
 .header a {
-  color: var(--sail-white-color);
+  color: var(--background-color);
   text-decoration: none;
 }
 
@@ -82,8 +157,8 @@ h2 {
 }
 
 .hero {
-  background-color: var(--ocean-blue-color);
-  color: var(--sail-white-color);
+  background-color: var(--secondary-color);
+  color: var(--background-color);
   flex: 1;
   display: flex;
 }
@@ -127,13 +202,13 @@ h2 {
 
 .hero-button {
   display: block;
-  background-color: var(--sand-color);
+  background-color: var(--accent-color);
   padding: 20px 30px;
   border-radius: 10px;
   font-size: 1.5rem;
   font-weight: bold;
   text-decoration: none;
-  color: var(--deep-sea-color);
+  color: var(--primary-color);
 }
 
 .section {
@@ -145,55 +220,47 @@ h2 {
 }
 
 .projects {
-  background-color: var(--sail-white-color);
-  color: var(--ocean-blue-color);
-}
-
-.section-title {
-  font-size: 1.2rem;
-  margin-bottom: 30px;
+  padding: 2rem 1rem;
+  background-color: var(--background-color);
+  color: var(--secondary-color);
 }
 
 .cards {
   display: flex;
-  flex-direction: row;
-  justify-content: center;
   flex-wrap: wrap;
-  gap: 50px;
-  margin-bottom: 50px;
+  justify-content: space-evenly;
+  gap: 2rem;
 }
 
 .card {
   width: 100%;
   max-width: 380px;
-  max-height: 600px;
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
-  border-radius: 16px;
-  background-color: var(--sea-foam-color);
+  gap: 1rem;
+  padding: 20px;
+  border-radius: 20px;
+  background-color: var(--highlight-color);
 }
 
 .card-image {
-  width: 320px;
-  height: 320px;
-  margin: 30px 30px 0 30px;
-  border-radius: 16px;
+  aspect-ratio: 4 / 3;
+  width: 100%;
+  height: auto;
   object-fit: cover;
+  border-radius: 12px;
 }
 
-.card-title {
-  margin: 0 30px;
-  font-weight: bold;
-}
-
-.card-content {
-  margin: 0 30px;
+.section-title {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+  display: flex;
+  justify-content: center;
 }
 
 .about {
-  background-color: var(--ocean-blue-color);
-  color: var(--sail-white-color);
+  background-color: var(--secondary-color);
+  color: var(--background-color);
 }
 
 .about-content {
@@ -203,9 +270,13 @@ h2 {
   margin-left: 20px;
 }
 
+.about-content > * + * {
+  margin-top: 1rem;
+}
+
 .footer {
-  background-color: var(--deep-sea-color);
-  color: var(--sail-white-color);
+  background-color: var(--primary-color);
+  color: var(--background-color);
   display: flex;
   flex-direction: column;
   align-items: center;
