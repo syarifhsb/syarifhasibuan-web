@@ -1,8 +1,8 @@
 # Syarif Hasibuan Personal Website
 
-> 🚧 UNDER CONSTRUCTION 🚧
-
 Hey! It's me Syarif Hasibuan. This is my honest attempt to create my beautiful personal website.
+
+Access it live at [syarifhasibuan.com](https://syarifhasibuan.com)
 
 If you're wondering who is behind this, this is how I look like.
 
