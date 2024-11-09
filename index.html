@@ -5,11 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Syarif Hasibuan</title>
     <meta
-        name="description"
-        content="Syarif is a Software Developer and Aerospace Engineer"
-        />
+      name="description"
+      content="Syarif is a Software Developer and Aerospace Engineer"
+    />
     <link rel="stylesheet" href="/index.css" />
-    <link rel="icon" href="/assets/icons/logo-sh-24.ico" />
+
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
   </head>
 
   <body class="site text-2xl mx-auto">
@@ -17,21 +19,17 @@
       <header class="header">
         <div class="container header-container">
           <a href="/">
-            <span class="logo">
-              <img
-                  src="/assets/icons/logo-sh-24.svg"
-              />
+            <div class="logo">
+              <img src="/favicon.svg" />
               <span>Syarif Hasibuan</span>
-            </span>
+            </div>
           </a>
 
           <nav class="navigation">
             <ul class="navigation-list">
               <li><a href="/">Home</a></li>
-              <!-- <li><a href="/projects">Projects</a></li> -->
-              <!-- <li><a href="/about">About</a></li> -->
-              <li><a href="#">Projects</a></li>
-              <li><a href="#">About</a></li>
+              <li><a href="/projects">Projects</a></li>
+              <li><a href="/contact">Contact</a></li>
             </ul>
           </nav>
         </div>
@@ -40,17 +38,17 @@
       <section class="hero section">
         <div class="hero-container container">
           <img
-              class="hero-image"
-              src="/assets/images/myself.jpg"
-              alt="It's me!"
-              />
+            class="hero-image"
+            src="/assets/images/myself.jpg"
+            alt="It's me!"
+          />
           <div class="hero-content">
             <h1 class="hero-title">Hey there!<br />Syarif Hasibuan here</h1>
             <p class="hero-description">
-            I am an aerospace engineer and a software engineer in one package.
-            I am currently on my web development journey.
+              I am an aerospace engineer and a software engineer in one package.
+              I am currently on my web development journey.
             </p>
-            <a class="hero-button" href="#">Contact me</a>
+            <a class="hero-button" href="/contact">Contact me</a>
           </div>
         </div>
       </section>
@@ -60,53 +58,69 @@
       <div class="section-title">
         <h2 class="text-2xl">My Projects</h2>
       </div>
-      <div class="cards container">
+      <div class="cards">
         <div class="card">
           <img
-              class="card-image"
-              src="/assets/images/Full-Flight-Simulatoren-cropped.jpg"
-              alt="Flight Simulator"
-              width="320"
-              height="320"
-              />
+            class="card-image"
+            src="/assets/images/full-flight-simulatoren.jpg"
+            alt="Flight Simulator"
+            width="320"
+            height="320"
+          />
           <div class="card-title">
             <h3>Aircraft Simulation</h3>
           </div>
           <div class="card-content">
-            <p>I build Aircraft Simulation model on my daily work. Particularly on Flight Control System and Navigation system. I do development on Matlab/Simulink, C code analysis, deployment, verification and validation on Airbus Simulation Platform.</p>
-          </div>
-        </div>
-        <div class="card">
-          <img
-              class="card-image"
-              src="/assets/images/game-of-life.gif"
-              alt="Lena"
-              width="320"
-              height="320"
-              />
-          <div class="card-title">
-            <h3>Conway's Game of Life in C</h3>
-          </div>
-          <div class="card-content">
-            <p>Recreation of Conway's Game of Life built with C and Simple DirectMedia Layer (SDL2). Check it out at:
-            <a href="https://github.com/syarifhasibuan/gameoflife" target="_blank">https://github.com/syarifhasibuan/gameoflife</a>
+            <p>
+              I build Aircraft Simulation model on my daily work. Particularly
+              on Flight Control System and Navigation system. I do development
+              on Matlab/Simulink, C code analysis, deployment, verification and
+              validation on Airbus Simulation Platform.
             </p>
           </div>
         </div>
         <div class="card">
           <img
-              class="card-image"
-              src="/assets/images/demo-csvr-cropped.gif"
-              alt="csvr - A CLI csv reader"
-              width="320"
-              height="320"
-              />
+            class="card-image"
+            src="/assets/images/game-of-life.gif"
+            alt="Lena"
+            width="320"
+            height="320"
+          />
+          <div class="card-title">
+            <h3>Conway's Game of Life in C</h3>
+          </div>
+          <div class="card-content">
+            <p>
+              Recreation of Conway's Game of Life built with C and Simple
+              DirectMedia Layer (SDL2). Check it out at:
+              <a
+                href="https://github.com/syarifhasibuan/gameoflife"
+                target="_blank"
+                >https://github.com/syarifhasibuan/gameoflife</a
+              >
+            </p>
+          </div>
+        </div>
+        <div class="card">
+          <img
+            class="card-image"
+            src="/assets/images/demo-csvr-cropped.gif"
+            alt="csvr - A CLI csv reader"
+            width="320"
+            height="320"
+          />
           <div class="card-title">
             <h3>csvr - A CLI csv reader</h3>
           </div>
           <div class="card-content">
-            <p>I love working in the terminal. This is a tool that's inspired from my workflow. It is build with ncurses with C, and it is very simple. Check it out at:
-            <a href="https://github.com/syarifhasibuan/csvr" target="_blank">https://github.com/syarifhasibuan/csvr</a>
+            <p>
+              I love working in the terminal. This is a tool that's inspired
+              from my workflow. It is build with ncurses with C, and it is very
+              simple. Check it out at:
+              <a href="https://github.com/syarifhasibuan/csvr" target="_blank"
+                >https://github.com/syarifhasibuan/csvr</a
+              >
             </p>
           </div>
         </div>
@@ -117,21 +131,21 @@
       <div class="section-title container">
         <h2>About</h2>
       </div>
-      <div class="about-content" >
+      <div class="about-content">
         <p>
-        I am a versatile and technically skilled engineer with a solid
-        foundation in Aircraft Systems, Control Systems, with a little bit of
-        Computer Science. With over five years of experience on Airbus
-        simulation platforms. I’m currently working as a Simulation Engineer
-        in Toulouse, France, where I develop sircraft systems simulation
-        models using Matlab/Simulink, analyze the the C codes, do testing and
-        validation on Airbus simulation platforms, both real time and non-real
-        time.
+          I am a versatile and technically skilled engineer with a solid
+          foundation in Aircraft Systems, Control Systems, with a little bit of
+          Computer Science. With over five years of experience on Airbus
+          simulation platforms. I’m currently working as a Simulation Engineer
+          in Toulouse, France, where I develop sircraft systems simulation
+          models using Matlab/Simulink, analyze the the C codes, do testing and
+          validation on Airbus simulation platforms, both real time and non-real
+          time.
         </p>
         <p>
-        Currently, I am embracing web development as a journey to get better
-        at software development. The page you are currently seeing is the
-        product of it. So, enjoy this presentation, and send me a feedback!
+          Currently, I am embracing web development as a journey to get better
+          at software development. The page you are currently seeing is the
+          product of it. So, enjoy this presentation, and send me a feedback!
         </p>
       </div>
     </section>

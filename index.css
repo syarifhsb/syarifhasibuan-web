@@ -1,6 +1,6 @@
 :root {
   --deep-sea-color: #1b3b5a;
-  --ocean-blue-color: #3c7fa6;
+  --ocean-blue-color: #357392;
   --sail-white-color: #f8f8ff;
   --sand-color: #e8dab2;
   --sea-foam-color: #d4f1f7;
@@ -50,6 +50,7 @@ h2 {
   justify-content: space-between;
   flex-wrap: wrap;
   flex-direction: row;
+  gap: 1rem;
 }
 
 .header a {
@@ -59,7 +60,10 @@ h2 {
 
 .logo {
   font-size: 1.5rem;
-  font-weight: 500;
+  font-weight: 900;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
 }
 
 .navigation {
@@ -69,8 +73,7 @@ h2 {
 .navigation-list {
   display: flex;
   flex-wrap: wrap;
-  gap: 40px;
-  font-weight: 700;
+  gap: 1rem;
   list-style: none;
   margin: 5px;
   padding: 0;
@@ -98,7 +101,7 @@ h2 {
 .hero-image {
   height: 500px;
   width: 500px;
-  border-radius: 100px;
+  border-radius: 1rem;
   object-fit: contain;
   margin: 20px 0;
 }
@@ -161,6 +164,7 @@ h2 {
 }
 
 .card {
+  width: 100%;
   max-width: 380px;
   max-height: 600px;
   display: flex;
@@ -175,6 +179,7 @@ h2 {
   height: 320px;
   margin: 30px 30px 0 30px;
   border-radius: 16px;
+  object-fit: cover;
 }
 
 .card-title {
@@ -192,8 +197,8 @@ h2 {
 }
 
 .about-content {
-  text-align: center;
   max-width: 780px;
+  line-height: 1.5rem;
   margin-right: 20px;
   margin-left: 20px;
 }
@@ -243,20 +248,5 @@ h2 {
   .hero-image {
     height: auto;
     width: 100%;
-    border-radius: 0;
-  }
-
-  /* .cards { */
-
-  /* } */
-
-  /* .card-image { */
-  /* } */
-}
-
-@media (max-width: 420px) {
-  .card-image {
-    height: auto;
-    width: calc(100vw - 100px);
   }
 }
