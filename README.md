@@ -12,7 +12,7 @@ Whelp, not the thing the one you want to see. You probably come here to see how 
 
 ## UI/UX Design
 
-Figma URL: (TODO)
+Figma URL: [Figma](https://www.figma.com/design/dzTYKXrNjcmQL7d9WaBAgu/Figma-basics?node-id=602-9&node-type=canvas&t=XtmfI21deZIErTbf-0)
 
 ## Pages
 
@@ -24,4 +24,6 @@ Figma URL: (TODO)
 
 This is it snippet of my ~~beautiful~~ website to be.
 
-![](assets/images/web_snippet_home.png)
+<p align="center">
+    <img src="assets/images/web_snippet_home.png" />
+</p>
