@@ -25,5 +25,5 @@ Figma URL: [Figma](https://www.figma.com/design/dzTYKXrNjcmQL7d9WaBAgu/Figma-bas
 This is it snippet of my ~~beautiful~~ website to be.
 
 <p align="center">
-    <img src="assets/images/web_snippet_home.png" />
+    <img src="assets/images/web-snippet-home.png" />
 </p>
