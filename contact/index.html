@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
   <head>
     <meta charset="UTF-8" />
@@ -14,7 +14,8 @@
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
     <script src="https://cdn.tailwindcss.com"></script>
   </head>
-  <body class="flex flex-col min-h-screen w-screen">
+
+  <body class="flex flex-col min-h-screen">
     <header
       class="flex flex-wrap flex-row justify-center bg-[var(--primary-color)] text-[var(--background-color)] p-2"
     >
@@ -39,70 +40,66 @@
         </nav>
       </div>
     </header>
-    <body>
-      <section
-        class="flex-1 flex flex-col items-center bg-[var(--background-color)] px-4 py-8"
+
+    <section
+      class="flex-grow flex flex-col items-center bg-[var(--background-color)] px-4 py-8"
+    >
+      <h2 class="text-3xl font-bold text-[var(--secondary-color)] p-2">
+        Contact me
+      </h2>
+      <div
+        class="flex flex-col bg-[var(--secondary-color)] p-5 rounded-xl gap-4 max-w-full sm:w-[512px] my-5"
       >
-        <h2
-          class="text-3xl font-bold text-center text-[var(--secondary-color)] p-2 w-full"
-        >
-          Contact me
-        </h2>
-        <div
-          class="flex flex-col bg-[var(--secondary-color)] p-5 rounded-xl gap-4 max-w-full sm:w-[512px] my-5"
-        >
-          <form>
-            <div
-              class="flex flex-col border-2 box-border bg-[var(--highlight-color)] focus-within:border-yellow-500 rounded-lg mb-5 pl-3.5 pr-1.5 py-1.5"
+        <form>
+          <div
+            class="flex flex-col border-2 box-border bg-[var(--highlight-color)] focus-within:border-yellow-500 rounded-lg mb-5 pl-3.5 pr-1.5 py-1.5"
+          >
+            <label for="full-name" class="text-sm text-[var(--secondary-color)]"
+              >Name:</label
             >
-              <label
-                for="full-name"
-                class="text-sm text-[var(--secondary-color)]"
-                >Name:</label
-              >
-              <input
-                type="text"
-                name="full-name"
-                class="bg-transparent focus:outline-none"
-              />
-            </div>
-            <div
-              class="flex flex-col border-2 box-border bg-[var(--highlight-color)] focus-within:border-yellow-500 rounded-lg mb-5 pl-3.5 pr-1.5 py-1.5"
-            >
-              <label for="email" class="text-sm text-[var(--secondary-color)]"
-                >Email:</label
-              >
-              <input
-                type="email"
-                name="email"
-                class="bg-transparent focus:outline-none"
-              />
-            </div>
-            <div
-              class="flex flex-col border-2 box-border bg-[var(--highlight-color)] focus-within:border-yellow-500 rounded-lg mb-5 pl-3.5 pr-1.5 py-1.5"
-            >
-              <label for="message" class="text-sm text-[var(--secondary-color)]"
-                >Message:</label
-              >
-              <textarea
-                name="message"
-                cols="30"
-                rows="10"
-                class="bg-transparent focus:outline-none"
-              ></textarea>
-            </div>
-          </form>
-          <div class="flex justify-center">
-            <button
-              type="submit"
-              class="bg-[var(--accent-color)] text-[var(--primary-color)] text-lg font-semibold rounded-lg px-6 py-2"
-            >
-              Submit
-            </button>
+            <input
+              type="text"
+              name="full-name"
+              class="bg-transparent focus:outline-none"
+            />
           </div>
+          <div
+            class="flex flex-col border-2 box-border bg-[var(--highlight-color)] focus-within:border-yellow-500 rounded-lg mb-5 pl-3.5 pr-1.5 py-1.5"
+          >
+            <label for="email" class="text-sm text-[var(--secondary-color)]"
+              >Email:</label
+            >
+            <input
+              type="email"
+              name="email"
+              class="bg-transparent focus:outline-none"
+            />
+          </div>
+          <div
+            class="flex flex-col border-2 box-border bg-[var(--highlight-color)] focus-within:border-yellow-500 rounded-lg mb-5 pl-3.5 pr-1.5 py-1.5"
+          >
+            <label for="message" class="text-sm text-[var(--secondary-color)]"
+              >Message:</label
+            >
+            <textarea
+              name="message"
+              cols="30"
+              rows="10"
+              class="bg-transparent focus:outline-none"
+            ></textarea>
+          </div>
+        </form>
+        <div class="flex justify-center">
+          <button
+            type="submit"
+            class="bg-[var(--accent-color)] text-[var(--primary-color)] text-lg font-semibold rounded-lg px-6 py-2"
+          >
+            Submit
+          </button>
         </div>
-      </section>
-    </body>
+      </div>
+    </section>
+
     <footer
       class="flex flex-col justify-end items-center bg-[var(--primary-color)] text-[var(--background-color)] p-4 gap-4"
     >

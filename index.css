@@ -4,7 +4,9 @@
   --primary-color: #1b3b5a; /* deep-sea-color */
   --secondary-color: #357392; /* ocean-blue-color */
   --background-color: #f8f8ff; /* sail-white-color */
+  --background-selection-color: #cae9ff; /* sail-white-color modified */
   --accent-color: #e8dab2; /* sand-color */
+  --accent-selection-color: #eae1c8; /* sand-color modified */
   --highlight-color: #d4f1f7; /* sea-foam-color */
   --dark-highlight-color: #c4a484; /* boat-wood-color */
   --custom-max-w: 1440px;
@@ -132,6 +134,10 @@ h2 {
   line-height: 2rem;
 }
 
+.header a:hover {
+  color: var(--background-selection-color);
+}
+
 .header a {
   color: var(--background-color);
   text-decoration: none;
@@ -217,6 +223,10 @@ h2 {
   font-weight: bold;
   text-decoration: none;
   color: var(--primary-color);
+}
+
+.hero-button:hover {
+  background-color: var(--accent-selection-color);
 }
 
 .section {
