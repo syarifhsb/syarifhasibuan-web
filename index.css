@@ -148,6 +148,7 @@ h2 {
 
 .navigation {
   font-size: 1.25rem;
+  line-height: 1.75rem;
 }
 
 .navigation-list {
@@ -156,7 +157,7 @@ h2 {
   gap: 1rem;
   list-style: none;
   padding: 0.5rem;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
 }
 
@@ -165,6 +166,9 @@ h2 {
   color: var(--background-color);
   flex: 1;
   display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 32px 16px;
 }
 
 .hero-container {
@@ -260,11 +264,17 @@ h2 {
   margin-bottom: 30px;
   display: flex;
   justify-content: center;
+  line-height: 2rem;
 }
 
 .about {
   background-color: var(--secondary-color);
   color: var(--background-color);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 50px;
+  padding-bottom: 50px;
 }
 
 .about-content {
