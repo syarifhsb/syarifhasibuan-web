@@ -24,7 +24,7 @@
       >
         <a href="/">
           <div
-            class="flex flex-row justify-center items-center text-2xl font-black p-2 gap-2"
+            class="flex flex-row justify-center items-center text-2xl font-black text-[var(--background-color)] hover:text-[var(--background-selection-color)] p-2 gap-2"
           >
             <img src="/favicon.svg" />
             <span>Syarif Hasibuan</span>
@@ -32,10 +32,28 @@
         </a>
 
         <nav class="flex items-center p-2">
-          <ul class="text-xl flex flex-wrap flex-row justify-center gap-4">
-            <li><a href="/">Home</a></li>
-            <li><a href="/projects">Projects</a></li>
-            <li><a href="/contact">Contact</a></li>
+          <ul
+            class="flex flex-wrap flex-row justify-center text-xl text-[var(--background-color)] gap-4"
+          >
+            <li>
+              <a class="hover:text-[var(--background-selection-color)]" href="/"
+                >Home</a
+              >
+            </li>
+            <li>
+              <a
+                class="hover:text-[var(--background-selection-color)]"
+                href="/projects"
+                >Projects</a
+              >
+            </li>
+            <li>
+              <a
+                class="hover:text-[var(--background-selection-color)]"
+                href="/contact"
+                >Contact</a
+              >
+            </li>
           </ul>
         </nav>
       </div>
@@ -92,7 +110,7 @@
         <div class="flex justify-center">
           <button
             type="submit"
-            class="bg-[var(--accent-color)] text-[var(--primary-color)] text-lg font-semibold rounded-lg px-6 py-2"
+            class="bg-[var(--accent-color)] hover:bg-[var(--accent-selection-color)] text-[var(--primary-color)] text-lg font-semibold rounded-lg px-6 py-2"
           >
             Submit
           </button>
