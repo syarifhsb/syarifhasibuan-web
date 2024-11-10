@@ -1,29 +1,152 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Syarif Hasibuan</title>
+    <meta
+      name="description"
+      content="Syarif is a Software Developer and Aerospace Engineer"
+    />
     <link rel="stylesheet" href="/index.css" />
+
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <script src="https://cdn.tailwindcss.com"></script>
   </head>
-  <header>
-    <h1>😎 Syarif Hasibuan</h1>
-    <nav>
-      <a href="/">Home</a>
-      <a href="/projects">Projects</a>
-      <a href="/about">About</a>
-    </nav>
-  </header>
-  <body>
-    <section class="hero">
-      <h2>My Projects</h2>
-      <p>Showcase of my projects</p>
-    </section>
+  <body class="flex flex-col min-h-screen w-screen">
+    <header
+      class="flex flex-wrap flex-row justify-center bg-[var(--primary-color)] text-[var(--background-color)] p-2"
+    >
+      <div
+        class="flex-1 flex flex-wrap flex-col sm:flex-row justify-between items-center max-w-[var(--custom-max-w)] gap-4"
+      >
+        <a href="/">
+          <div
+            class="flex flex-row justify-center items-center text-2xl font-black p-2 gap-2"
+          >
+            <img src="/favicon.svg" />
+            <span>Syarif Hasibuan</span>
+          </div>
+        </a>
+
+        <nav class="flex items-center p-2">
+          <ul class="text-xl flex flex-wrap flex-row justify-center gap-4">
+            <li><a href="/">Home</a></li>
+            <li><a href="/projects">Projects</a></li>
+            <li><a href="/contact">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <body>
+      <section
+        class="flex-1 flex flex-col items-center bg-[var(--secondary-color)] px-4 py-8"
+      >
+        <h2 class="text-3xl font-bold text-[var(--background-color)] p-2">
+          My Projects
+        </h2>
+        <div class="flex flex-wrap my-5 justify-evenly gap-8">
+          <div
+            class="flex flex-col gap-4 bg-[var(--background-color)] max-w-[380px] w-100 p-5 rounded-2xl"
+          >
+            <img
+              src="/assets/images/full-flight-simulatoren.jpg"
+              class="aspect-[4/3] object-cover w-100 h-auto rounded-xl"
+              alt="Flight Simulation"
+            />
+            <div class="text-2xl text-[var(--primary-color)] font-medium">
+              <h3>Aircraft Simulation</h3>
+            </div>
+            <div class="font-lg text-[var(--primary-color)]">
+              <p>
+                I build Aircraft Simulation model on my daily work. Particularly
+                on Flight Control System and Navigation system. I do development
+                on Matlab/Simulink, C code analysis, deployment, verification
+                and validation on Airbus Simulation Platform.
+              </p>
+            </div>
+          </div>
+          <div
+            class="flex flex-col gap-4 bg-[var(--background-color)] max-w-[380px] w-100 p-5 rounded-2xl"
+          >
+            <img
+              src="/assets/images/game-of-life.gif"
+              class="aspect-[4/3] object-cover w-100 h-auto rounded-xl"
+              alt="Conway's Game of Life"
+            />
+            <div class="text-2xl text-[var(--primary-color)] font-medium">
+              <h3>Conway's Game of Life in C</h3>
+            </div>
+            <div class="font-lg text-[var(--primary-color)]">
+              <p>
+                Recreation of Conway's Game of Life built with C and Simple
+                DirectMedia Layer (SDL2). Check it out at:
+                <a
+                  href="https://github.com/syarifhasibuan/gameoflife"
+                  target="_blank"
+                  >https://github.com/syarifhasibuan/gameoflife</a
+                >
+              </p>
+            </div>
+          </div>
+          <div
+            class="flex flex-col gap-4 bg-[var(--background-color)] max-w-[380px] w-100 p-5 rounded-2xl"
+          >
+            <img
+              src="/assets/images/demo-csvr.gif"
+              class="aspect-[4/3] object-cover w-100 h-auto rounded-xl"
+              alt="csvr - A CLI csv reader"
+            />
+            <div class="text-2xl text-[var(--primary-color)] font-medium">
+              <h3>csvr - A CLI csv reader</h3>
+            </div>
+            <div class="font-lg text-[var(--primary-color)]">
+              <p>
+                I love working in the terminal. This is a tool that's inspired
+                from my workflow. It is build with ncurses with C, and it is
+                very simple. Check it out at:
+                <a href="https://github.com/syarifhasibuan/csvr" target="_blank"
+                  >https://github.com/syarifhasibuan/csvr</a
+                >
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </body>
+    <footer
+      class="flex flex-col justify-end items-center bg-[var(--primary-color)] text-[var(--background-color)] p-4 gap-4"
+    >
+      <div class="flex-1 flex flex-row gap-4">
+        <a
+          class="icon-white"
+          href="mailto:syarifhsb.dev@gmail.com"
+          target="_blank"
+        >
+          <img src="/assets/icons/mail.svg" />
+        </a>
+        <a
+          class="icon-white"
+          href="https://github.com/syarif-hsb"
+          target="_blank"
+        >
+          <img src="/assets/icons/github.svg" />
+        </a>
+        <a
+          class="icon-white"
+          href="https://www.linkedin.com/in/syarif-hsb/"
+          target="_blank"
+        >
+          <img src="/assets/icons/linkedin.svg" />
+        </a>
+        <a class="icon-white" href="https://x.com/syarif_hsb" target="_blank">
+          <img src="/assets/icons/twitter.svg" />
+        </a>
+      </div>
+      <div>
+        <p>&copy; 2024 Syarif Hasibuan</p>
+      </div>
+    </footer>
   </body>
-  <footer>
-    <img src="/assets/icons/mail.svg" />
-    <img src="/assets/icons/github.svg" />
-    <img src="/assets/icons/linkedin.svg" />
-    <img src="/assets/icons/twitter.svg" />
-  </footer>
 </html>
