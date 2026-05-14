@@ -1,106 +1,165 @@
+import { useState } from 'react'
 import Header from '../components/Header'
 import Footer from '../components/Footer'
 
 const projects = [
   {
-    image: '/assets/images/full-flight-simulatoren.jpg',
-    alt: 'Flight Simulator',
+    index: '01',
     title: 'Aircraft Simulation',
     description:
-      'I build Aircraft Simulation model on my daily work. Particularly on Flight Control System and Navigation system. I do development on Matlab/Simulink, C code analysis, deployment, verification and validation on Airbus Simulation Platform.',
+      '7+ years building real-time aircraft systems simulation models. Covers Flight Control Systems (FCS), Autopilot, Engines, and TCAS — including ARINC 429 and AFDX data bus integration. Work Package Leader managing a team of four engineers. Stack: MATLAB/Simulink, SCADE, C, Jenkins, SVN/Git.',
+    link: null,
   },
   {
-    image: '/assets/images/game-of-life.gif',
-    alt: "Conway's Game of Life",
-    title: "Conway's Game of Life in C",
-    description: (
-      <>
-        Recreation of Conway&apos;s Game of Life built with C and Simple DirectMedia Layer (SDL2). Check it out at:{' '}
-        <a href="https://github.com/syarifhsb/gameoflife" target="_blank" rel="noreferrer">
-          https://github.com/syarifhsb/gameoflife
-        </a>
-      </>
-    ),
+    index: '02',
+    title: "Conway's Game of Life",
+    description: "Recreation of Conway's Game of Life built with C and SDL2.",
+    link: 'https://github.com/syarifhsb/gameoflife',
   },
   {
-    image: '/assets/images/demo-csvr.gif',
-    alt: 'csvr - A CLI csv reader',
-    title: 'csvr - A CLI csv reader',
-    description: (
-      <>
-        I love working in the terminal. This is a tool that&apos;s inspired from my workflow. It is build with ncurses with C, and it is very simple. Check it out at:{' '}
-        <a href="https://github.com/syarifhsb/csvr" target="_blank" rel="noreferrer">
-          https://github.com/syarifhsb/csvr
-        </a>
-      </>
-    ),
+    index: '03',
+    title: 'csvr',
+    description: 'Terminal CSV reader built with ncurses and C. Inspired by a real workflow need.',
+    link: 'https://github.com/syarifhsb/csvr',
+  },
+  {
+    index: '04',
+    title: 'awqat',
+    description: "Prayer times in the terminal. Written in C, powered by the Aladhan API. For terminal users who don't want to leave their workflow.",
+    link: 'https://github.com/syarifhsb/awqat',
+  },
+  {
+    index: '05',
+    title: 'AnythingBudget',
+    description: 'Full-stack personal finance web app — budget tracking, authentication, real-time data. Built and shipped end-to-end. Stack: React, TypeScript, tRPC, Prisma, PostgreSQL.',
+    link: 'https://anythingbudget.com',
+  },
+  {
+    index: '06',
+    title: 'This website',
+    description: 'Personal site built with Vite, React, TypeScript, and Tailwind v4.',
+    link: 'https://github.com/syarifhsb/syarifhasibuan-web',
   },
 ]
+
+const uses = [
+  { category: 'OS', items: [{ label: 'Daily driver', value: 'Arch Linux' }] },
+  { category: 'Shell', items: [{ label: 'Shell', value: 'zsh' }] },
+  {
+    category: 'Languages',
+    items: [
+      { label: 'Systems', value: 'C' },
+      { label: 'Simulation', value: 'MATLAB / Simulink, SCADE' },
+      { label: 'Web', value: 'TypeScript, React' },
+      { label: 'Scripting', value: 'Python, Bash' },
+    ],
+  },
+  {
+    category: 'Tools',
+    items: [
+      { label: 'Build tool', value: 'Vite' },
+      { label: 'Package manager', value: 'Bun' },
+      { label: 'Version control', value: 'Git, SVN' },
+      { label: 'CI/CD', value: 'Jenkins' },
+    ],
+  },
+]
+
+function ProjectList() {
+  const [expanded, setExpanded] = useState<string | null>(null)
+
+  return (
+    <ul className="flex flex-col">
+      {projects.map(({ index, title, description, link }) => {
+        const isOpen = expanded === index
+        return (
+          <li key={index} className="border-b border-border">
+            <button
+              onClick={() => setExpanded(isOpen ? null : index)}
+              className="w-full flex items-center gap-4 py-4 text-left group"
+            >
+              <span className="text-muted text-sm w-6 shrink-0">{index}</span>
+              <span className="text-text text-base font-bold flex-1 group-hover:text-accent transition-colors">
+                {title}
+              </span>
+              <span className="text-muted text-sm">{isOpen ? '−' : '+'}</span>
+            </button>
+
+            {isOpen && (
+              <div className="flex gap-4 pb-5">
+                <span className="w-6 shrink-0" />
+                <div className="flex flex-col gap-2">
+                  <p className="text-muted text-base leading-relaxed">{description}</p>
+                  {link && (
+                    <a
+                      href={link}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="text-sm text-muted hover:text-accent transition-colors"
+                    >
+                      {link.replace('https://', '')} →
+                    </a>
+                  )}
+                </div>
+              </div>
+            )}
+          </li>
+        )
+      })}
+    </ul>
+  )
+}
 
 export default function Home() {
   return (
     <div className="flex flex-col min-h-screen">
-      <div className="flex flex-col min-h-screen">
-        <Header />
+      <Header />
 
-        <section className="bg-secondary text-bg flex-1 flex flex-col items-center px-4 py-8">
-          <div className="flex flex-row flex-wrap-reverse justify-start items-center gap-[50px] flex-1 max-w-[1440px] w-full">
-            <img
-              className="h-[500px] w-[500px] max-w-full rounded-2xl object-contain my-5"
-              src="/assets/images/myself.jpg"
-              alt="It's me!"
-            />
-            <div className="max-w-[500px] flex-1 flex flex-col gap-4 items-start">
-              <h1 className="text-3xl font-bold">
-                Hey there!<br />Syarif Hasibuan here
-              </h1>
-              <p className="text-2xl">
-                I am an aerospace engineer and a software engineer in one package. I am currently on my web development journey.
-              </p>
-              <a
-                className="bg-accent hover:bg-accent-selection px-8 py-5 rounded-xl text-2xl font-bold no-underline text-primary"
-                href="mailto:syarifhsb.dev@gmail.com"
-              >
-                Contact me
-              </a>
+      <main className="flex-1">
+        <div className="px-6 max-w-2xl mx-auto w-full">
+
+          {/* Hero */}
+          <section id="home" className="py-16">
+            <h1 className="text-3xl font-bold text-text mb-2">Syarif Hasibuan</h1>
+            <p className="text-accent mb-6">Software Developer</p>
+            <p className="text-muted leading-relaxed mb-6">
+              I build software — web apps, terminal tools, and everything in between.
+              Also a simulation engineer in aerospace.
+            </p>
+            <a href="mailto:syarifhsb.dev@gmail.com" className="text-accent hover:underline text-base" onClick={(e) => { e.preventDefault(); window.open('mailto:syarifhsb.dev@gmail.com') }}>
+              &gt; contact me
+            </a>
+          </section>
+
+          {/* Projects */}
+          <section id="projects" className="py-16 border-t border-border">
+            <h2 className="text-xs text-muted uppercase tracking-widest mb-8">Projects</h2>
+            <ProjectList />
+          </section>
+
+          {/* Uses */}
+          <section id="uses" className="py-16 border-t border-border">
+            <h2 className="text-xs text-muted uppercase tracking-widest mb-8">Uses</h2>
+            <div className="flex flex-col gap-10">
+              {uses.map(({ category, items }) => (
+                <div key={category}>
+                  <h3 className="text-accent font-bold text-base mb-4">{category}</h3>
+                  <ul className="flex flex-col gap-3">
+                    {items.map(({ label, value }) => (
+                      <li key={label} className="flex gap-4 text-base border-b border-border pb-3">
+                        <span className="text-muted w-32 shrink-0">{label}</span>
+                        <span className="text-text">{value}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              ))}
             </div>
-          </div>
-        </section>
-      </div>
+          </section>
 
-      <section className="py-8 px-4 bg-bg text-secondary">
-        <div className="flex justify-center mb-8">
-          <h2 className="text-2xl font-bold">My Projects</h2>
-        </div>
-        <div className="flex flex-wrap justify-evenly gap-8">
-          {projects.map((p) => (
-            <div key={p.title} className="w-full max-w-[380px] flex flex-col gap-4 p-5 rounded-2xl bg-highlight">
-              <img className="aspect-[4/3] w-full h-auto object-cover rounded-xl" src={p.image} alt={p.alt} />
-              <h3 className="text-2xl font-medium text-primary">{p.title}</h3>
-              <p className="text-primary">{p.description}</p>
-            </div>
-          ))}
-        </div>
-      </section>
 
-      <section className="bg-secondary text-bg flex flex-col items-center py-12 px-4">
-        <div className="flex justify-center mb-8">
-          <h2 className="text-2xl font-bold">About</h2>
         </div>
-        <div className="max-w-[780px] flex flex-col gap-4">
-          <p>
-            I am a versatile and technically skilled engineer with a solid foundation in Aircraft Systems, Control Systems,
-            with a little bit of Computer Science. With over five years of experience on Airbus simulation platforms.
-            I&apos;m currently working as a Simulation Engineer in Toulouse, France, where I develop aircraft systems
-            simulation models using Matlab/Simulink, analyze the C codes, do testing and validation on Airbus simulation
-            platforms, both real time and non-real time.
-          </p>
-          <p>
-            Currently, I am embracing web development as a journey to get better at software development. The page you
-            are currently seeing is the product of it. So, enjoy this presentation, and send me a feedback!
-          </p>
-        </div>
-      </section>
+      </main>
 
       <Footer />
     </div>

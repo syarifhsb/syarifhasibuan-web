@@ -1,22 +1,30 @@
-import { Link } from 'react-router'
+const links = [
+  { href: '#projects', label: 'projects' },
+  { href: '#uses', label: 'uses' },
+  { href: 'mailto:syarifhsb.dev@gmail.com', label: 'contact' },
+]
 
 export default function Header() {
   return (
-    <header className="flex flex-wrap flex-row justify-center bg-primary text-bg p-2">
-      <div className="flex-1 flex flex-wrap flex-col sm:flex-row justify-between items-center max-w-[1440px] gap-4">
-        <Link to="/" className="flex flex-row justify-center items-center text-2xl font-black text-bg hover:text-bg-selection p-2 gap-2">
-          <img src="/favicon.svg" alt="logo" className="w-8 h-8" />
-          <span>Syarif Hasibuan</span>
-        </Link>
-
-        <nav className="flex items-center p-2">
-          <ul className="flex flex-wrap flex-row justify-center text-xl text-bg gap-4 list-none p-0">
-            <li><Link className="hover:text-bg-selection" to="/">Home</Link></li>
-            <li><Link className="hover:text-bg-selection" to="/projects">Projects</Link></li>
-            <li><Link className="hover:text-bg-selection" to="/contact">Contact</Link></li>
-          </ul>
-        </nav>
-      </div>
+    <header className="sticky top-0 z-10 bg-primary flex flex-wrap items-center justify-between px-6 py-2 border-b border-border">
+      <a href="#" className="hover:opacity-80 transition-opacity">
+        <img src="/assets/icons/terminal.gif" alt="terminal" className="w-[60px] h-[60px]" />
+      </a>
+      <nav>
+        <ul className="flex flex-wrap gap-4 list-none p-0 m-0">
+          {links.map(({ href, label }) => (
+            <li key={href}>
+              <a
+                href={href}
+                className="text-muted hover:text-accent text-sm transition-colors"
+                onClick={href.startsWith('mailto:') ? (e) => { e.preventDefault(); window.open(href) } : undefined}
+              >
+                {label}
+              </a>
+            </li>
+          ))}
+        </ul>
+      </nav>
     </header>
   )
 }
