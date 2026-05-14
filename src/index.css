@@ -1,0 +1,16 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #1b3b5a;
+  --color-secondary: #357392;
+  --color-bg: #f8f8ff;
+  --color-bg-selection: #cae9ff;
+  --color-accent: #e8dab2;
+  --color-accent-selection: #eae1c8;
+  --color-highlight: #d4f1f7;
+  --color-dark-highlight: #c4a484;
+}
+
+.icon-white {
+  filter: invert(1);
+}
