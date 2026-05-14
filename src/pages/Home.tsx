@@ -85,24 +85,26 @@ function ProjectList() {
               <span className="text-muted text-sm">{isOpen ? '−' : '+'}</span>
             </button>
 
-            {isOpen && (
-              <div className="flex gap-4 pb-5">
-                <span className="w-6 shrink-0" />
-                <div className="flex flex-col gap-2">
-                  <p className="text-muted text-base leading-relaxed">{description}</p>
-                  {link && (
-                    <a
-                      href={link}
-                      target="_blank"
-                      rel="noreferrer"
-                      className="text-sm text-muted hover:text-accent transition-colors"
-                    >
-                      {link.replace('https://', '')} →
-                    </a>
-                  )}
+            <div className={`grid transition-all duration-300 ease-in-out ${isOpen ? 'grid-rows-[1fr]' : 'grid-rows-[0fr]'}`}>
+              <div className="overflow-hidden">
+                <div className="flex gap-4 pb-5">
+                  <span className="w-6 shrink-0" />
+                  <div className="flex flex-col gap-2">
+                    <p className="text-muted text-base leading-relaxed">{description}</p>
+                    {link && (
+                      <a
+                        href={link}
+                        target="_blank"
+                        rel="noreferrer"
+                        className="text-sm text-muted hover:text-accent transition-colors"
+                      >
+                        {link.replace('https://', '')} →
+                      </a>
+                    )}
+                  </div>
                 </div>
               </div>
-            )}
+            </div>
           </li>
         )
       })}
