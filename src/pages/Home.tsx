@@ -98,7 +98,7 @@ function ProjectList() {
                         rel="noreferrer"
                         className="text-sm text-muted hover:text-accent transition-colors"
                       >
-                        {link.replace('https://', '')} →
+                        {link.replace('https://', '')}
                       </a>
                     )}
                   </div>
